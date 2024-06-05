@@ -1,0 +1,133 @@
+/*RESET*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*Body Styles*/
+
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: #0d192c;
+  font-family: "Outfit", sans-serif;
+}
+
+/*Card Styles*/
+
+.card {
+  width: 350px;
+  height: 596px;
+  background-color: #15263f;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  justify-content: space-between;
+  padding: 22px;
+}
+
+.card > .bg-img {
+  width: 302px;
+  height: 302px;
+  border-radius: 15px;
+  align-self: center;
+  justify-self: start;
+  position: relative;
+  background: url(images/image-equilibrium.jpg) no-repeat center center/cover;
+}
+
+.card > .bg-img > .view-icon {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 40%;
+  left: 43%;
+  opacity: 0;
+  z-index: 3;
+}
+.card > .bg-img:hover > .view-icon {
+  opacity: 1;
+}
+.card > .bg-img > .overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00fff8;
+  opacity: 0;
+  z-index: 2;
+  border-radius: 15px;
+}
+.card > .bg-img:hover > .overlay {
+  opacity: 0.5;
+}
+.card > h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.card > h1:hover {
+  color: #00fff8;
+}
+
+.card > p {
+  font-size: 18px;
+  color: #8bacd9;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sec1,
+.sec2 {
+  display: flex;
+  gap: 10px;
+}
+
+.sec1 > p {
+  color: #00fff8;
+}
+.sec2 > p {
+  color: #90b2e1;
+}
+
+.profile {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.profile > img {
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 33px;
+  height: 33px;
+}
+
+.profile > p {
+  font-size: 18px;
+  color: #90b2e1;
+}
+.profile > p > span {
+  color: #ffffff;
+}
+
+.profile > p > span:hover {
+  color: #00fff8;
+}
+hr {
+  border: 1px solid #2e405a;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 327px;
+    height: 543px;
+  }
+}
